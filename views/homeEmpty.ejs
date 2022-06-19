@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    #hadder
+    {
+        background: whitesmoke;
+        width: 100%;
+        height: 70px;
+        padding: 1px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div id="hadder">
+            <center>
+                <h1>Task</h1>
+            </center>
+        </div>
+        <br>
+        <div id="tabale">
+            <table class="table table-bordered">
+                <tr>
+                    <th>reg  id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Notes</th>
+                    <th>appartment Number</th>
+                    <th>Address</th>
+                    <th>Pin code</th>
+                    <th>Card id</th>
+                    <th>Token id</th>
+                    <th>Card last four digit</th>
+                </tr>
+                <tr>
+                    <th colspan="11"> <center><h2><%- output%></h2></center></th>
+                </tr>
+            </table>
+        </div>
+        <a href="/login">
+        <button type="button" class="btn btn-primary">add user</button>
+         </a>
+    </div>
+
+</body>
+</html>
