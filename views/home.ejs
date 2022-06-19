@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    #hadder
+    {
+        background: whitesmoke;
+        width: 100%;
+        height: 70px;
+        padding: 1px 0 0 0;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div id="hadder">
+            <center>
+                <h1>User Details</h1>
+            </center>
+        </div>
+        <br>
+        <!-- link for adduser -->
+        <a href="/login">
+            <button type="button" class="btn btn-primary">add user</button>
+             </a>
+             <br>
+             <br>
+        <!-- search button -->
+        <form class="form-horizontal" method="post" action="/search">
+            <div class="form-group">
+                <input type="search" class="col-xs-2" placeholder="Search" aria-label="Search" name="_id" aria-describedby="search-addon" />
+              </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-10">
+                  <button type="submit" class="btn btn-success">search</button>
+                  <br><br>
+        <!-- form -->
+        </form>   
+        <div id="tabale">
+            <table class="table table-bordered">
+<tr>
+    
+                    <th>reg  id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Notes</th>
+                    <th>appartment Number</th>
+                    <th>Address</th>
+                    <th>Pin code</th>
+                    <th>Card id</th>
+                    <th>Token id</th>
+                    <th>Card last four digit</th>
+</tr>
+<% for(let row of output){%>
+<tr>
+<th><%- row._id %></th>
+<th><%- row.name %></th>
+<th><%- row.email %></th>
+<th><%- row.mobile %></th>
+<th><%- row.notes %></th>
+<th><%- row.apartment %></th>
+<th><%- row.address %></th>
+<th><%- row.pin %></th>
+<th><%- row.card %></th>
+<th><%- row.token %></th>
+<th><%- row.four_digit %></th>
+</tr>
+<% }%>
+            </table>
+        </div>
+        
+    </div>
+
+</body>
+</html>
